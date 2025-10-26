@@ -1,5 +1,6 @@
 package com.example.tp8.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +18,7 @@ public class Compte {
     private double solde;
 
     @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dateCreation;
 
     @Enumerated(EnumType.STRING)
